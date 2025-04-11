@@ -1,0 +1,11 @@
+@property --grid-gap {
+    syntax: "*"; /* <length> does not work :shrug */
+    inherits: false;
+    initial-value: 1rem;
+}
+
+@property --grid-columns {
+    syntax: "<integer>";
+    inherits: false;
+    initial-value: 10;
+}

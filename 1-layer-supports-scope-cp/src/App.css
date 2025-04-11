@@ -1,0 +1,24 @@
+:root {
+    font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap);
+}
+
+.albums {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: var(--grid-gap);
+}

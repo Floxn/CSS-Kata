@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Nesting Grid with Album Layouts!</title>
+    <style>
+        @layer base, component, utilities;
+
+        @layer base {
+            @property --grid-columns {
+                syntax: "<integer>";
+                inherits: false;
+                initial-value: 6;
+            }
+
+            p {
+                color: #4CAF50;
+            }
+        }
+
+        @layer component {
+            p {
+                color: initial;
+            }
+
+            .albums {
+                display: grid;
+                grid-template-columns: repeat(var(--grid-columns), 1fr);
+                gap: 1rem;
+
+                &:nth-child(odd) {
+                    --grid-columns: 12;
+                }
+
+                h2 {
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
+
+                img {
+                    outline: 5px solid #747bff;
+                }
+            }
+
+            @scope (.albums) to (.album__details) {
+                :scope img {
+                    outline: 5px solid darkolivegreen;
+                }
+            }
+        }
+
+        @layer utilities {
+            .album__artwork {
+                outline: 5px solid darkorange;
+            }
+        }
+
+        /* Reicht nicht wegen cascading -> nur img*/
+/*        @scope (.albums) to (.album__artwork) {
+            img {
+                outline: darkolivegreen;
+            }
+
+        }*/
+    </style>
+</head>
+
+<body>
+<div class="albums">
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=1">
+        <div class="album__details">
+            <style>
+                @scope {
+                    /* ist nicht ausreichend weil nur img */
+                    img {
+                        outline: 5px solid hotpink;
+                    }
+                    :scope img {
+                        outline: 5px solid hotpink;
+                    }
+                }
+            </style>
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, excepturi!</p>
+            <img class="album__details__image" src="https://picsum.photos/200/300?v=2341">
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=2">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">short.</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=3">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=4">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=5">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=6">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=7">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=8">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=9">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=10">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+        </div>
+    </div>
+</div>
+
+<div class="albums" style="--grid-columns: 3">
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=1">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, excepturi!</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=2">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">short.</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=3">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+        </div>
+    </div>
+    <div class="album">
+        <img class="album__artwork" src="https://picsum.photos/200/300?v=4">
+        <div class="album__details">
+            <h2>Album Title</h2>
+            <p class="album__artist">Artist Name</p>
+            <p class="album__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed sint doloremque
+                repellat, iste debitis.</p>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
