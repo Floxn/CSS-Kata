@@ -17,7 +17,7 @@ Ziel ist es neue CSS Techniken zu lernen und erste Erfahrungen damit zu sammeln.
       * margin-size
       * background-color
       * font-color
-    * Benutze die definierten Custom Properties in der `src/components/Album.jsx` Komponente
+    * Benutze die definierten Custom Properties in der `src/components/album/index.jsx` Komponente
     * Die zweite Liste von `.albums` soll aus nur 3 Spalten bestehen.
     * **NOCH IRGENDWAS MIT VERERBUNG ALS AUFGABE**
 2. @scope: Kopiere die Album Komponente und verwende @scope um den Style nur auf die Album Komponente anzuwenden.
