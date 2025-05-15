@@ -1,13 +1,11 @@
-.albums {
-    .album {
-        background: #213547;
-        color: #e5e7eb;
-        border: 5px solid darkorange;
-        padding: 1ch;
-        .album__details {
-            h2 {
-                font-size: 4rem;
-            }
+.album {
+    background: #213547;
+    color: #e5e7eb;
+    border: 5px solid darkorange;
+    padding: 1ch;
+    .album__details {
+        h2 {
+            font-size: 4rem;
         }
     }
 }
