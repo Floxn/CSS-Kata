@@ -1,7 +1,5 @@
-import "./index.css"
+import "./index-scope-HINT.css"
 
-/*
- * Wird später beim Thema @scope verwendet
 const colors = [
     "red",
     "blue",
@@ -13,11 +11,14 @@ const colors = [
     "brown",
     "gray",
 ]
-**/
+
 
 export function Album() {
     return (
         <div className="album">
+            <style>
+                {` {/* Add some style here */} @scope { h2 { color: ${colors[Math.floor(Math.random() * colors.length)]}; } }`}
+            </style>
             <img className="image" src={`https://picsum.photos/300/200?v=${Math.random() * 100}`} alt=""/>
             <a href="#">Ich bin ein Link</a>
             <div className="album__details">
