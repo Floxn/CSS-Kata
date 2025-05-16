@@ -4,5 +4,5 @@
 CSS Grid etwas genauer anschauen
 
 ## Aufgaben
-1. Erstelle dieses Layout mithilfe ein Grids wobei der helle Bereich ein Hintergrund haben soll.
+1. Erstelle dieses Layout mithilfe ein Grids wobei der helle Bereich ein Bild im Hintergrund (kein background-image) ist.
    ![grid-layout.png](grid-layout.png)
