@@ -4,7 +4,7 @@
 2. `npm run dev`
 
 ## Ziel vom Coding Kata
-Ziel ist es neue CSS Techniken zu lernen und erste Erfahrungen damit zu sammeln.
+Ziel ist es "neue" CSS kennen zu lernen und erste Erfahrungen damit zu sammeln.
 
 ## Aufgaben
 1. Arbeite mit Custom Properties und definiere sie mit @property, `src/_properties.css` ist dafür vorbereitet.
