@@ -31,8 +31,8 @@ export function Album() {
             </div>
             <footer>
                 <h2>Footer</h2>
-                <p> Lorem ipsum dolor.
-                </p>
+                <p> Lorem ipsum dolor.</p>
+                <a href="#">Footer Link</a>
             </footer>
         </div>
     )

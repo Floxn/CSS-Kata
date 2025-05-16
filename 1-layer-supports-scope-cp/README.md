@@ -20,11 +20,12 @@ Ziel ist es neue CSS Techniken zu lernen und erste Erfahrungen damit zu sammeln.
     * Die zweite Liste von `.albums` soll aus nur 3 Spalten bestehen, dabei soll das stylesheet oder die Custom Property unverändert bleiben.
     * **NOCH IRGENDWAS MIT VERERBUNG ALS AUFGABE**
 2. @scope: Kopiere die Album Komponente und verwende @scope um den Style nur auf die Album Komponente anzuwenden.
-   * Verwende @scope in der .css Datei der Album Komponente
+   * Variante 1: Verwende @scope in der .css Datei der Album Komponente
      * gib dem ersten img eine farbige outline
      * gib dem zweiten img eine andere farbige outline
-     * gib nur der ersten `h2` eine Farbe
-   * Verwende @scope in der .jsx als style der Album Komponente und gib jeder `h2` eine random Farbe `${colors[Math.floor(Math.random() * colors.length)]`
+     * gib nur der ersten `h2` eine Farbe in verwendung von `@scope`
+     * style alle `a` in der Album Komponente als Button, außer das `a` im Footer
+   * Variante 2: Verwende @scope in der .jsx als style der Album Komponente und gib jeder `h2` eine random Farbe `${colors[Math.floor(Math.random() * colors.length)]`
    * Wo ist nun der Unterschied zwischen den beiden Varianten?
 3. @Layer: **HIER FEHLT MIR DIE IDEE ZU EINER AUFGABE**
    * importiere die `src/_layer.css` in die `src/App.jsx` und schau was passiert
